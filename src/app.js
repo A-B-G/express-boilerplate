@@ -14,8 +14,8 @@ const morganOptions = (NODE_ENV === "production")
     : 'common';
 
 app.use(morgan(morganOptions));
-app.use(helmet());
 app.use(cors());
+app.use(helmet());
 
 app.get('/', (req, res) => {
     res.send('Hello, boilerplate!');
